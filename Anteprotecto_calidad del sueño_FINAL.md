@@ -72,28 +72,28 @@ La falta de un diagnóstico estadístico formal sobre la persistencia de este co
 
 ### 2.1. Objetivo General
 
-Evaluar de forma cuantitativa el impacto del uso de los dispositivos electrónicos durante períodos nocturnos en la calidad y duración del sueño de los estudiantes de la Escuela de Estadística y Ciencias Actuariales de la Universidad Central de Venezuela (EECA-UCV) durante el período lectivo 2026-01S.
+Evaluar de manera cuantitativa el impacto del uso de los dispositivos electrónicos durante períodos nocturnos sobre la calidad y la duración del sueño de los estudiantes de la Escuela de Estadística y Ciencias Actuariales de la Universidad Central de Venezuela (EECA-UCV) durante el período lectivo 2026-01S.
 
 ### 2.2. Objetivos Específicos
 
 1. Caracterizar los hábitos de uso de dispositivos electrónicos en los estudiantes de la EECA durante las horas previas al descanso, considerando variables de exposición temporal, tipos de dispositivos y actividades de interacción digital.
-2. Estimar de forma indirecta la duración del sueño de los estudiantes, diferenciando el comportamiento de los individuos durante la semana laboral y los días de descanso a partir del registro de horarios límite (hora de acostarse y hora de levantarse).
-3. Evaluar el nivel percibido de la calidad del sueño e interrupciones del mismo en la población de estudio mediante escalas ordinales adaptadas.
-4. Determinar la existencia de asociaciones estadísticas significativas entre horas calculadas de descanso y la frecuencia o intensidad del uso de los dispositivos mediante tablas de contingencia y análisis descriptivo.
+2. Estimar de forma indirecta la duración del sueño de los estudiantes, diferenciando el comportamiento de los sujetos en la semana laboral y en los días de descanso a partir del registro de la hora de acostarse y la hora de levantarse.
+3. Evaluar el nivel percibido de la calidad del sueño e interrupciones del mismo sobre la población de estudio mediante escalas ordinales adaptadas.
+4. Determinar la existencia de asociaciones estadísticas significativas entre las horas calculadas de descanso y la frecuencia o intensidad del uso de los dispositivos mediante tablas de contingencia y análisis descriptivo.
 
 ---
 
 ## 3. Finalidad
 
-El propósito central de este trabajo es aportar evidencia empírica directa sobre la realidad estudiantil de la Escuela de Estadística y Ciencias Actuariales, midiendo el alcance real con el que la exposición nocturna a pantallas afecta el descanso diario (LeBourgeois et al., 2017). Más allá del ejercicio académico, se busca que los hallazgos sirvan de insumo práctico para la propia escuela: diseñar campañas concretas de higiene del sueño, proveer pautas realistas para la administración del tiempo de pantalla en semanas de alta carga evaluativa y abrir espacios de discusión sobre el balance tecnológico en la vida universitaria.
+El propósito central de este trabajo es aportar evidencia empírica directa sobre la realidad estudiantil de la Escuela de Estadística y Ciencias Actuariales, midiendo el impacto que tiene la exposición nocturna a pantallas sobre el descanso diario (LeBourgeois et al., 2017). Más allá de la tarea académica, se busca que los resultados de esta investigación sean de utilidad para la propia escuela, tanto a nivel estudiantil como del profesorado, por ejemplo: diseñar campañas concretas de higiene del sueño, proveer pautas realistas para la administración del tiempo de pantalla en semanas de alta carga evaluativa y abrir espacios de diálogo sobre el balance tecnológico en la vida universitaria.
 
 ---
 
 ## 4. Justificación
 
-El descanso nocturno no constituye un simple intervalo de inactividad, sino un proceso neurobiológico activo indispensable para la consolidación sináptica, la memoria de trabajo y la recuperación metabólica (Hirshkowitz et al., 2015). En el ámbito de la EECA-UCV, donde el rendimiento del estudiante depende de mantener una concentración sostenida frente a asignaturas de alta exigencia analítica (como Cálculo, Álgebra Lineal, Inferencia y Métodos Numéricos), la privación continuada de sueño deteriora directamente la agilidad mental y eleva el margen de error en el razonamiento cuantitativo.
+El descanso nocturno no constituye un simple intervalo de inactividad, sino un proceso neurobiológico activo indispensable para la consolidación sináptica, la memoria de trabajo y la recuperación metabólica (Hirshkowitz et al., 2015). En el ámbito de la EECA-UCV, donde el rendimiento del estudiante se basa principalmente en mantener una concentración sostenida por largos períodos de tiempo frente a asignaturas de alta exigencia analítica (como en Matemáticas, Estadísticas, Probabilidades etc.), la privación de sueño deteriora directamente la agilidad mental de los estudiantes y eleva el margen de error en el razonamiento cuantitativo, principamente durantes semanas de alta carga académica.
 
-En el plano metodológico, la investigación brinda un valor formativo directo al permitir recolectar datos empíricos de primera mano en el campus mediante un cuestionario estructurado, aplicando pruebas de asociación, tabulación cruzada y control de sesgos de medición en lugar de trabajar con conjuntos de datos secundarios. En el plano comunitario, atiende un hábito generalizado entre los estudiantes universitarios: retrasar el horario de dormir para compensar jornadas académicas o extender la interacción en redes sociales (LeBourgeois et al., 2017; Maurya et al., 2022), asumiendo un déficit biológico acumulativo cuyas repercusiones rara vez se cuantifican formalmente.
+En el plano metodológico, esta investigación brinda un valor formativo directo al permitir recolectar datos empíricos de primera mano en el campus estudiantil mediante un cuestionario estructurado, aplicando pruebas de asociación, tabulación cruzada y control de sesgos de medición en lugar de trabajar con conjuntos de datos secundarios. En el plano comunitario, atiende un hábito generalizado entre los estudiantes universitarios: retrasar el horario de dormir para compensar jornadas académicas o extender la interacción en redes sociales (LeBourgeois et al., 2017; Maurya et al., 2022), asumiendo un déficit biológico acumulativo cuyas consecuencias rara vez se cuantifican formalmente, o siquiera se tienen en cuenta.
 
 ---
 
@@ -101,11 +101,11 @@ En el plano metodológico, la investigación brinda un valor formativo directo a
 
 ### 5.1. Cobertura Horizontal
 
-La investigación está dirigida a los estudiantes de la EECA inscritos durante el período lectivo 2026-01S. El alcance real del estudio dependerá de una muestra conformada por aquellos estudiantes que decidan participar de forma voluntaria mediante su consentimiento informado.
+La investigación está dirigida a los estudiantes de la EECA inscritos durante el período lectivo 2026-01S. El alcance real del estudio dependerá de una muestra conformada por aquellos estudiantes que decidan participar de forma voluntaria mediante su consentimiento.
 
 ### 5.2. Cobertura Vertical
 
-Se analizarán los hábitos de uso nocturno de pantallas (con énfasis en teléfonos inteligentes y computadoras portátiles) en las horas previas a dormir, así como la duración estimada del sueño (calculada a partir de los horarios de acostarse y levantarse) y la frecuencia de interrupciones del descanso reportadas.
+Se analizarán los hábitos de uso nocturno de pantallas (con énfasis en teléfonos inteligentes y computadoras portátiles) en las horas previas a dormir, así como la duración estimada del sueño que será calculada a partir de la diferencia entre los horarios de acostarse y levantarse, y la frecuencia de interrupciones del descanso reportadas por los propios estudiantes.
 
 ---
 
@@ -117,7 +117,7 @@ El período para la recolección de los datos y la referencia temporal de las pr
 
 ## 7. Antecedentes
 
-El estudio del impacto de las tecnologías en el descanso se fundamenta en investigaciones internacionales recientes que sirven de base directa para este trabajo:
+El estudio del impacto de las tecnologías en el descanso se fundamenta en investigaciones internacionales previas:
 
 - **He et al. (2025):** En una revisión sistemática y metaanálisis publicada en _Frontiers in Psychiatry_ (con 21 estudios de cohorte y más de 548.000 participantes), concluyeron que cada hora adicional de pantalla al día reduce entre 3 y 5 minutos la duración del sueño e incrementa significativamente el riesgo de insomnio.
 - **Hysing et al. (2015):** En un estudio poblacional con adolescentes noruegos (_BMJ Open_), determinaron que el uso de computadoras y teléfonos inteligentes antes de acostarse se asocia directamente con un mayor retraso para quedarse dormido y una menor cantidad total de horas de sueño.
@@ -133,10 +133,10 @@ El estudio del impacto de las tecnologías en el descanso se fundamenta en inves
 
 La regulación del sueño humano se explica principalmente a través del modelo de dos procesos (Borbély, 1982; LeBourgeois et al., 2017):
 
-1. **Proceso C (Circadiano):** Ciclo biológico interno de aproximadamente 24 horas regulado por el núcleo supraquiasmático, el cual sincroniza los ritmos de vigilia y descanso guiándose por la luz ambiental captada por la retina.
-2. **Proceso S (Homeostático):** Presión acumulativa de sueño que se incrementa de forma progresiva a medida que transcurren las horas de vigilia continua desde el último despertar.
+1. **Proceso C (Circadiano):** Es un ciclo biológico interno que dura aproximadamente 24 horas y es regulado por el núcleo supraquiasmático, el cual sincroniza los ritmos de vigilia y descanso guiándose por la luz ambiental captada por la retina.
+2. **Proceso S (Homeostático):** Es la presión acumulativa de sueño que se incrementa de forma progresiva a medida que transcurren las horas de vigilia continua desde el último despertar.
 
-**Interacción con la tecnología:** El uso nocturno de pantallas afecta ambos procesos a través de las tres vías descritas en la literatura (LeBourgeois et al., 2017): primero, el desplazamiento del horario de dormir al preferir continuar usando el dispositivo; segundo, la estimulación psicológica generada por la interacción en redes sociales o contenidos digitales; y tercero, la exposición directa a la luz azul (450–480 nm), la cual inhibe la liberación de melatonina y retrasa la fase circadiana normal.
+**Interacción con la tecnología:** El uso nocturno de pantallas afecta ambos procesos a través de las tres vías descritas en la literatura (LeBourgeois et al., 2017): el primero, es el desplazamiento del horario de dormir al preferir continuar usando el dispositivo; el segundo, es la estimulación psicológica generada por la interacción en redes sociales o contenidos digitales; y el tercero, la exposición directa a la luz azul (450–480 nm), la cual inhibe la liberación de melatonina y retrasa la fase circadiana normal.
 
 **Higiene del sueño y latencia:** La higiene del sueño engloba los hábitos y condiciones del entorno que facilitan un descanso reparador y continuo (Hirshkowitz et al., 2015). El uso de dispositivos móviles en la cama incrementa la latencia del sueño (el tiempo que transcurre entre acostarse e iniciar el descanso), fragmentando la rutina nocturna y disminuyendo la eficiencia total del sueño (Hysing et al., 2015).
 
@@ -233,10 +233,10 @@ _Instrumento aplicado bajo la modalidad de autorreporte digital a la comunidad e
 
 ## 14. Posibles Dificultades para la Realización del Trabajo
 
-1. **Inexactitud y sesgo de memoria en el autorreporte:** Al tratarse de un relevamiento por encuesta digital y no de una medición telemétrica pasiva del sistema operativo de los teléfonos, los minutos reportados dependen de la estimación subjetiva de cada estudiante. Esto introduce un margen de error habitual en la reconstrucción retrospectiva del tiempo nocturno, tendiendo a subestimar el uso fragmentado en redes sociales y sobrestimar las horas efectivas dormidas al confundir hora de acostarse con tiempo de sueño real.
-2. **Caída en la tasa de respuesta por calendarios de evaluación:** La difusión del formulario coincide con momentos álgidos del semestre 2026-01S en la EECA (períodos de pruebas parciales en cátedras filtro como Inferencia o Análisis Numérico), lo cual puede mermar la tasa de respuesta voluntaria o concentrar las respuestas en estudiantes con cargas académicas menos exigentes.
-3. **Variables de confusión no aisladas en el cuestionario:** El descanso universitario se ve condicionado por factores intervinientes de peso como el consumo nocturno de café o estimulantes para estudiar, traslados prolongados hacia la universidad y jornadas laborales extracurriculares. Aislar con precisión el efecto atribuible exclusivamente a la pantalla requerirá un análisis estratificado cuidadoso.
-4. **Dispersión por asimetría semanal:** Los estudiantes suelen presentar patrones de descanso bimodal (restricción severa de sueño de lunes a viernes y compensación o desvelo agudo los fines de semana). Calcular un promedio simple sin discriminar ambos regímenes distorsionaría la interpretación de la varianza.
+1. **Inexactitud y sesgo de memoria en el autorreporte:** Al tratarse del uso de la encuesta digital y no de una medición directa del sistema operativo de los teléfonos o los dispositivos electrónicos, los tiempos reportados dependen de la estimación subjetiva de cada estudiante. Esto introduce un margen de error en la reconstrucción retrospectiva del tiempo nocturno, tendiendo a subestimar el uso fragmentado en redes sociales y sobrestimar las horas efectivas dormidas al confundir hora de acostarse con tiempo de sueño real.
+2. **Caída en la tasa de respuesta por calendarios de evaluación:** La difusión del formulario puede coincidir con momentos álgidos del semestre (períodos de pruebas parciales), lo cual puede mermar la tasa de respuesta voluntaria o concentrar las respuestas en estudiantes con cargas académicas menos exigentes.
+3. **Variables de confusión no aisladas en el cuestionario:** El descanso universitario se ve condicionado por factores intervinientes de peso como el consumo nocturno de café o estimulantes para estudiar, traslados prolongados hacia la universidad y jornadas laborales extracurriculares o sociales. Aislar con precisión el efecto atribuible exclusivamente a la pantalla requerirá un análisis más cuidadoso.
+4. **Dispersión por asimetría semanal:** Los estudiantes suelen presentar patrones de descanso bimodal con restricción severa de sueño de lunes a viernes y compensación o desvelo agudo los fines de semana. Al calcular un promedio simple sin diferenciar ambos regímenes distorsionaría la interpretación de la varianza.
 
 ---
 
