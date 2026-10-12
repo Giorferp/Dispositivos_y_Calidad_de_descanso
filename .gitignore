@@ -1,0 +1,12 @@
+# Carpeta de criterios de evaluacion y temas
+Criterios de evaluación y temas/
+Criterios de evaluación y temas/
+*Criterios de evaluaci*
+
+# Archivos auxiliares de LaTeX y temporales
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+.DS_Store
