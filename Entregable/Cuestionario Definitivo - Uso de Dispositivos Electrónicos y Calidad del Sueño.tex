@@ -1,0 +1,193 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{mathptmx}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+
+\geometry{
+  top=2.5cm,
+  bottom=2.5cm,
+  left=2.5cm,
+  right=2.5cm,
+  headheight=15pt
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize EECA-UCV --- Computación Estadística (2026-01S)}
+\rhead{\footnotesize Cuestionario Definitivo}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\onehalfspacing
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1.2ex}
+
+\begin{document}
+
+\begin{center}
+    {\bfseries UNIVERSIDAD CENTRAL DE VENEZUELA\\
+    FACULTAD DE CIENCIAS ECONÓMICAS Y SOCIALES\\
+    ESCUELA DE ESTADÍSTICA Y CIENCIAS ACTUARIALES\\
+    DEPARTAMENTO DE INFORMÁTICA --- CÁTEDRA DE COMPUTACIÓN ESTADÍSTICA\par}
+    \vspace{0.2cm}
+    {\small PERÍODO ACADÉMICO 2026-01S\par}
+    \vspace{0.4cm}
+    {\bfseries\large CUESTIONARIO DEFINITIVO\\
+    USO DE DISPOSITIVOS ELECTRÓNICOS Y CALIDAD DEL SUEÑO EN ESTUDIANTES DE LA EECA-UCV\par}
+\end{center}
+
+\vspace{0.2cm}
+
+\noindent\fbox{
+\begin{minipage}{0.97\textwidth}
+\textbf{DECLARACIÓN DE CONSENTIMIENTO INFORMADO Y SECRETO ESTADÍSTICO}
+
+El presente instrumento forma parte de una investigación académica desarrollada en la Escuela de Estadística y Ciencias Actuariales (EECA-UCV). El objetivo es analizar la relación cuantitativa entre los hábitos de exposición nocturna a pantallas y los patrones de descanso de los estudiantes durante el semestre 2026-01S.
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Carácter Voluntario y Anónimo:} Su participación es absolutamente voluntaria y anónima. No se recolectan nombres, números de cédula, direcciones de correo electrónico ni identificadores de red.
+    \item \textbf{Marco Jurídico de Protección de Datos:} De estricta conformidad con la \textit{Constitución de la República Bolivariana de Venezuela (1999)}, \textbf{Artículo 28} (derecho de acceso y confidencialidad en el tratamiento de datos personales) y \textbf{Artículo 60} (derecho a la protección de la intimidad, vida privada y confidencialidad), sus respuestas gozan de total reserva.
+    \item \textbf{Secreto Estadístico:} Conforme a los Artículos 19 y 20 de la \textit{Ley de la Función Pública de Estadística (2001)}, los datos suministrados están amparados bajo el principio de reserva legal y se emplearán exclusivamente con fines de agregación estadística y modelación académica.
+    \item \textbf{Instrucciones:} Responda con base en su comportamiento habitual durante las últimas dos semanas lectivas típicas. Ingrese las horas en formato de 24 horas (ej. 23:30 para las 11:30 p.m.; 06:45 para las 6:45 a.m.).
+\end{itemize}
+\end{minipage}
+}
+
+\vspace{0.4cm}
+
+\section*{Sección I: Datos Sociodemográficos y Académicos}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Sexo biológico:} \\
+    \quad [ \quad ] 1. Femenino \qquad [ \quad ] 2. Masculino
+
+    \item \textbf{Edad cumplida:} \\
+    \quad [\hspace{1.5cm}] años cumplidos.
+
+    \item \textbf{Carrera en la que se encuentra formalmente inscrito(a) en la EECA-UCV:} \\
+    \quad [ \quad ] 1. Ciclo Básico \qquad [ \quad ] 2. Estadística \\
+    \quad [ \quad ] 3. Ciencias Actuariales \qquad [ \quad ] 4. Ambas menciones simultáneas
+
+    \item \textbf{Semestre que cursa actualmente (mayor carga horaria de asignaturas inscritas):} \\
+    \quad [ \quad ] 1. 1° -- 2° semestre \qquad [ \quad ] 2. 3° -- 4° semestre \qquad [ \quad ] 3. 5° -- 6° semestre \\
+    \quad [ \quad ] 4. 7° -- 8° semestre \qquad [ \quad ] 5. 9° -- 10° semestre
+\end{enumerate}
+
+\section*{Sección II: Hábitos de Consumo Digital y Uso Nocturno de Dispositivos}
+
+\begin{enumerate}[leftmargin=*, resume]
+    \item \textbf{¿Cuál es el tipo de dispositivo de uso preponderante en las dos horas previas a dormir?} \\
+    \quad [ \quad ] 1. Teléfono inteligente (\textit{Smartphone}) \\
+    \quad [ \quad ] 2. Computadora portátil (\textit{Laptop}) \\
+    \quad [ \quad ] 3. Computadora de escritorio (\textit{PC de torre}) \\
+    \quad [ \quad ] 4. Tableta electrónica (\textit{Tablet}) \\
+    \quad [ \quad ] 5. Televisor / Smart TV \\
+    \quad [ \quad ] 6. Consola de videojuegos u otro dispositivo
+
+    \item \textbf{Tiempo promedio de uso nocturno de pantallas antes de conciliar el sueño:} \\
+    \quad [ \quad ] 1. Menos de 30 minutos \\
+    \quad [ \quad ] 2. Entre 30 y 59 minutos \\
+    \quad [ \quad ] 3. Entre 60 y 119 minutos (1 a 2 horas) \\
+    \quad [ \quad ] 4. Entre 120 y 179 minutos (2 a 3 horas) \\
+    \quad [ \quad ] 5. 180 minutos o más (3 horas o más)
+
+    \item \textbf{Actividad digital predominante efectuada en la pantalla previa al descanso:} \\
+    \quad [ \quad ] 1. Redes sociales y mensajería instantánea (Instagram, WhatsApp, TikTok, X, etc.) \\
+    \quad [ \quad ] 2. Estudio académico, lectura técnica o realización de tareas UCV \\
+    \quad [ \quad ] 3. Consumo de video o series en streaming (YouTube, Netflix, etc.) \\
+    \quad [ \quad ] 4. Videojuegos interactivos \\
+    \quad [ \quad ] 5. Actividades laborales remotas o teletrabajo
+
+    \item \textbf{Latencia pre-sueño:} ¿Cuántos minutos transcurren aproximadamente desde que apaga o deja la pantalla hasta que intenta conciliar el sueño con los ojos cerrados? \\
+    \quad [\hspace{1.5cm}] minutos de latencia pre-sueño.
+\end{enumerate}
+
+\section*{Sección III: Parámetros de Descanso y Calidad Percibida del Sueño}
+
+\begin{enumerate}[leftmargin=*, resume]
+    \item \textbf{Horarios habituales durante los días lectivos de semana (Lunes a Viernes):} \\
+    a. Hora en que apaga la luz e intenta dormir (formato 24h, ej. 23:45): [\hspace{2.5cm}] \\
+    b. Hora en que se despierta para iniciar el día (formato 24h, ej. 06:15): [\hspace{2.5cm}]
+
+    \item \textbf{Horarios habituales durante los fines de semana (Sábado y Domingo):} \\
+    a. Hora en que apaga la luz e intenta dormir (formato 24h, ej. 01:30): [\hspace{2.5cm}] \\
+    b. Hora en que se despierta (formato 24h, ej. 09:45): [\hspace{2.5cm}]
+
+    \item \textbf{Frecuencia de interrupciones o despertares nocturnos motivados por revisar el dispositivo o recibir alertas:} \\
+    \quad [ \quad ] 0. Ninguna interrupción (0 veces por noche) \\
+    \quad [ \quad ] 1. Una vez (1 vez por noche) \\
+    \quad [ \quad ] 2. Dos veces (2 veces por noche) \\
+    \quad [ \quad ] 3. Tres veces o más ($\ge 3$ veces por noche)
+
+    \item \textbf{Nivel de calidad subjetiva del descanso al despertar por las mañanas:} \\
+    \quad [ \quad ] 5. Excelente: Me despierto totalmente renovado(a), con energía sostenida durante el día. \\
+    \quad [ \quad ] 4. Buena: Cansancio muy leve y transitorio que se disipa rápidamente. \\
+    \quad [ \quad ] 3. Regular: Somnolencia moderada, fatiga ocasional durante las actividades académicas. \\
+    \quad [ \quad ] 2. Mala: Cansancio persistente, dificultad para concentrarme en clases. \\
+    \quad [ \quad ] 1. Muy mala: Agotamiento severo, necesidad urgente de estimulantes o siestas obligadas.
+\end{enumerate}
+
+\newpage
+
+\section*{Cuadro de Indicadores Técnicos y Operacionalización de Variables}
+
+A continuación se presenta la matriz metodológica que vincula formalmente cada ítem del cuestionario con las variables analíticas de la investigación:
+
+\vspace{0.2cm}
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabularx}{\textwidth}{p{3.2cm}p{3.8cm}lllX}
+        \toprule
+        \textbf{Variable} & \textbf{Definición Operacional} & \textbf{Rol} & \textbf{Tipo} & \textbf{Escala} & \textbf{Categorías / Rango} \\
+        \midrule
+        \textbf{Tiempo de uso nocturno} & Minutos diarios en pantalla en las 2h previas al sueño & Independiente principal & Cuantitativa continua & Razón & 1: $<30$ min, 2: $30\text{--}59$, 3: $60\text{--}119$, 4: $120\text{--}179$, 5: $\ge 180$ min \\
+        \addlinespace
+        \textbf{Dispositivo principal} & Terminal tecnológico predominante previo al descanso & Independiente secundaria & Cualitativa & Nominal & 1: Smartphone, 2: Laptop, 3: PC, 4: Tablet, 5: Smart TV, 6: Consola/Otro \\
+        \addlinespace
+        \textbf{Actividad digital} & Tarea de interacción efectuada en la pantalla & Independiente secundaria & Cualitativa & Nominal & 1: Redes/chat, 2: Estudio UCV, 3: Streaming, 4: Videojuegos, 5: Trabajo \\
+        \addlinespace
+        \textbf{Latencia pre-sueño} & Minutos entre apagar el equipo y cerrar los ojos & Independiente interviniente & Cuantitativa continua & Razón & Minutos continuos $[0, 360]$ \\
+        \addlinespace
+        \textbf{Hora acostarse (semana)} & Hora de reloj en que intenta dormir (Lun--Vie) & Primaria de cálculo & Cuantitativa & Intervalo & Horas y minutos (Formato 24h: HH:MM) \\
+        \addlinespace
+        \textbf{Hora levantarse (semana)} & Hora de reloj en que despierta e inicia día (Lun--Vie) & Primaria de cálculo & Cuantitativa & Intervalo & Horas y minutos (Formato 24h: HH:MM) \\
+        \addlinespace
+        \textbf{Duración de sueño (semana)} & Tiempo en cama calculado por diferencia modular (Lun--Vie) & Dependiente & Cuantitativa continua & Razón & Horas continuas. Categorías: $<5$h, $5\text{--}6.9$h, $7\text{--}9$h, $>9$h \\
+        \addlinespace
+        \textbf{Hora acostarse (fin de sem.)} & Hora de reloj en que intenta dormir (Sáb--Dom) & Primaria de cálculo & Cuantitativa & Intervalo & Horas y minutos (Formato 24h: HH:MM) \\
+        \addlinespace
+        \textbf{Hora levantarse (fin de sem.)} & Hora de reloj en que despierta (Sáb--Dom) & Primaria de cálculo & Cuantitativa & Intervalo & Horas y minutos (Formato 24h: HH:MM) \\
+        \addlinespace
+        \textbf{Duración en fin de semana} & Horas de reposo calculadas en días libres (Sáb--Dom) & Dependiente comparativa & Cuantitativa continua & Razón & Horas continuas. Permite estimar jetlag social ($\Delta t$) \\
+        \addlinespace
+        \textbf{Interrupciones nocturnas} & Frecuencia de despertares motivados por la pantalla & Interviniente & Cuantitativa discreta & Razón & 0: Ninguna, 1: 1 vez, 2: 2 veces, 3: $\ge 3$ veces \\
+        \addlinespace
+        \textbf{Calidad percibida del sueño} & Valoración subjetiva global del descanso al despertar & Dependiente principal & Cualitativa policotómica & Ordinal & 1: Muy mala, 2: Mala, 3: Regular, 4: Buena, 5: Excelente \\
+        \addlinespace
+        \textbf{Sexo biológico} & Condición biológica del informante & De control & Cualitativa dicotómica & Nominal & 1: Femenino, 2: Masculino \\
+        \addlinespace
+        \textbf{Edad cumplida} & Años cumplidos al momento del levantamiento & De control & Cuantitativa discreta & Razón & Enteros $\ge 16$ años \\
+        \addlinespace
+        \textbf{Carrera cursada} & Programa o mención formalmente matriculada & De control & Cualitativa & Nominal & 1: Ciclo Básico, 2: Estadística, 3: Actuariales, 4: Ambas \\
+        \addlinespace
+        \textbf{Semestre académico} & Nivel curricular con mayor carga de materias inscritas & De control & Cualitativa policotómica & Ordinal & 1: 1°--2°, 2: 3°--4°, 3: 5°--6°, 4: 7°--8°, 5: 9°--10° \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\end{document}
+

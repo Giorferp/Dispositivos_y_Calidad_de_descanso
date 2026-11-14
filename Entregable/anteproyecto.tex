@@ -3,18 +3,23 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish, es-tabla]{babel}
-\usepackage{mathptmx} % Times New Roman clasica de la escuela
+\usepackage{mathptmx} % Times New Roman clásica de la escuela
 \usepackage{geometry}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
 \usepackage{hanging}
 \usepackage{amsmath, amssymb}
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\usepackage{xurl}
+\usepackage{tocloft}
 
-% Margenes estandares UCV (3cm sup/izq, 2.5cm inf/der)
+% Márgenes estándares UCV (3cm sup/izq, 2.5cm inf/der)
 \geometry{
   top=3cm,
   bottom=2.5cm,
@@ -22,11 +27,7 @@
   right=2.5cm
 }
 
-\usepackage{float}
-\usepackage{xurl}
-\usepackage{tocloft}
-
-% Ajuste de ancho de numeros en el indice para que no choquen los de 2 digitos (10 al 15)
+% Ajuste de ancho de números en el índice para que no choquen los de 2 dígitos
 \renewcommand{\cftsecnumwidth}{2.4em}
 \renewcommand{\cftsubsecnumwidth}{2.8em}
 
@@ -55,8 +56,8 @@
     \vspace{0.3cm}
     {\small SEMESTRE 2026-01S\par}
     
-    \vspace{3.2cm}
-    {\bfseries\large EL IMPACTO DEL USO DE DISPOSITIVOS ELECTRÓNICOS EN LA CALIDAD DEL SUEÑO DE ESTUDIANTES DE LA EECA-UCV DURANTE EL PERÍODO 2026-01S\par}
+    \vspace{3.0cm}
+    {\bfseries\large RELACIÓN LINEAL ENTRE EL TIEMPO DE USO NOCTURNO DE DISPOSITIVOS ELECTRÓNICOS Y LA CALIDAD DEL SUEÑO EN ESTUDIANTES DE LA EECA-UCV DURANTE EL PERÍODO 2026-01S\par}
     
     \vspace{3.5cm}
     \noindent
@@ -64,22 +65,21 @@
         \raggedright
         \textbf{Estudiantes:}\\[0.15cm]
         Armando Delfín, C.I: 30.330.804\\
-        Giovanni Fermín, C.I: 31.112.857\\
+        Giovanni Fermín, C.I: 31.126.857\\
         Anaís Moncada, C.I: 26.152.765
     \end{minipage}%
     \hfill
     \begin{minipage}[t]{0.38\textwidth}
-        
         \textbf{Profesora:}\\[0.15cm]
         Oriana Medina
     \end{minipage}
     
     \vfill
-    {\normalsize Caracas, Septiembre 2026\par}
+    {\normalsize Caracas, Noviembre 2026\par}
 \end{titlepage}
 
 % -------------------------------------------------------------
-% INDICE DE CONTENIDOS
+% ÍNDICE DE CONTENIDOS
 % -------------------------------------------------------------
 \pagenumbering{roman}
 \begin{singlespace}
@@ -96,65 +96,81 @@
 
 \section{Planteamiento del Problema}
 
-Desde la popularización y uso masivo de la tecnología en información y comunicación móvil, se ha visto una mutación sustancial en los hábitos de la cotidianidad de la población en todo el mundo (LeBourgeois et al., 2017). Particularmente en los jóvenes, quienes representan la mayor proporción estudiantil en los sectores de educación superior; quienes han adoptado de forma masiva el uso de los dispositivos móviles en la rutina diaria, tanto diurna como nocturna.
+Desde la popularización y adopción masiva de la tecnología móvil y los dispositivos digitales portátiles, se ha producido una transformación sustancial en las rutinas de la población a nivel global (LeBourgeois et al., 2017). Esta dinámica adquiere especial relevancia en la población estudiantil universitaria, cuyos integrantes integran de forma intensiva el uso de teléfonos inteligentes, computadoras portátiles y tabletas en sus actividades diurnas y nocturnas.
 
-El uso recurrente de estos dispositivos es capaz de impactar la calidad del sueño a través de varios mecanismos (LeBourgeois et al., 2017): la sustitución del tiempo invertido en otras actividades para en cambio invertirlo en el uso de pantallas, el estímulo psicológico derivado del contenido digital y la emisión de luz azul, la cual puede tener un impacto en el ciclo circadiano. Esto es preocupante, pues tener hábitos de sueño saludables es fundamental para tener una buena salud (Hirshkowitz et al., 2015). Sin embargo, en los últimos años se ha observado un declive significativo en la cantidad de horas de sueño promedio en todo el mundo, siendo que para el 2015 la proporción de adultos durmiendo habitualmente menos del rango óptimo de 7 a 9 horas es de uno por cada tres (Liu et al., 2016).
+La interacción recurrente con estos terminales en horarios nocturnos altera la calidad del descanso mediante mecanismos fisiológicos y conductuales ampliamente documentados (LeBourgeois et al., 2017): la sustitución del tiempo destinado a dormir por el consumo de contenidos digitales, la estimulación neurocognitiva derivada de las pantallas interactivas y la exposición directa a la luz azul, la cual inhibe la secreción de melatonina y altera los ritmos circadianos. Esta situación resulta alarmante considerando que el descanso regular y adecuado constituye un pilar indispensable para el rendimiento intelectual y la salud integral (Hirshkowitz et al., 2015). A escala mundial, cerca de un tercio de la población adulta duerme por debajo del rango óptimo de 7 a 9 horas diarias (Liu et al., 2016).
 
-En el contexto local y objetivo de estudio, la Escuela de Estadística y Ciencias Actuariales de la Universidad Central de Venezuela (EECA-UCV), las asignaturas representan una alta carga cognitiva y un alto grado de dedicación al cómputo y uso de dispositivos móviles, la búsqueda de información y métodos de estudio digitales fomentan el uso de estos dispositivos. Durante el período académico 2026-01S (y en anteriores períodos), la comunidad estudiantil enfrenta estas presiones de carácter logístico, lo que incrementa el uso de los dispositivos electrónicos en horarios poco convencionales.
+En el ámbito particular de la Escuela de Estadística y Ciencias Actuariales de la Universidad Central de Venezuela (EECA-UCV), los planes de estudio exigen una alta carga cognitiva, un elevado esfuerzo de abstracción cuantitativa y jornadas prolongadas de dedicación frente al computador en tareas de programación, cálculo actuarial y análisis de datos. En el transcurso del período académico 2026-01S, la comunidad estudiantil asume compromisos académicos y dinámicas de transporte urbano que desplazan frecuentemente las horas de lectura, estudio e interacción tecnológica hacia la noche tardía.
 
-La falta de un diagnóstico estadístico formal sobre la persistencia de este comportamiento y su vinculación con los trastornos en patrones de descanso, limita el desarrollo de técnicas y estrategias de salud. Por lo tanto, se plantea la siguiente interrogante: ¿Existe un impacto estadísticamente significativo del tiempo invertido en el uso de dispositivos electrónicos y los hábitos de uso en períodos nocturnos sobre la calidad y duración efectiva del sueño en los estudiantes inscritos en la EECA-UCV durante el semestre 2026-01S?
+A pesar de que el cansancio matutino se manifiesta de manera cotidiana en las aulas de clase, la EECA-UCV no dispone de un relevamiento métrico formal que describa la persistencia de estos hábitos y cuantifique la asociación empírica entre la exposición tecnológica previa al reposo y el déficit de sueño en su alumnado. En consideración a este vacío de información, se formula la siguiente pregunta central de investigación:
+
+\begin{quote}
+\textit{¿De qué manera la duración de la exposición nocturna a pantallas de dispositivos electrónicos altera la calidad y las horas efectivas de sueño en los estudiantes de la EECA-UCV?}
+\end{quote}
 
 
 \section{Objetivos de la Investigación}
 
 \subsection{Objetivo General}
-Evaluar de manera cuantitativa el impacto del uso de los dispositivos electrónicos durante períodos nocturnos sobre la calidad y la duración del sueño de los estudiantes de la Escuela de Estadística y Ciencias Actuariales de la Universidad Central de Venezuela (EECA-UCV) durante el período lectivo 2026-01S.
+Analizar la relación lineal entre el tiempo de uso nocturno de dispositivos electrónicos y la calidad del sueño en los estudiantes de la EECA-UCV durante el período 2026-01S.
 
 \subsection{Objetivos Específicos}
 \begin{enumerate}
-    \item Caracterizar los hábitos de uso de dispositivos electrónicos en los estudiantes de la EECA durante las horas previas al descanso, considerando variables de exposición temporal, tipos de dispositivos y actividades de interacción digital.
-    \item Estimar de forma indirecta la duración del sueño de los estudiantes, diferenciando el comportamiento de los sujetos en la semana laboral y en los días de descanso a partir del registro de la hora de acostarse y la hora de levantarse.
-    \item Evaluar el nivel percibido de la calidad del sueño e interrupciones del mismo sobre la población de estudio mediante escalas ordinales adaptadas.
-    \item Determinar la existencia de asociaciones estadísticas significativas entre las horas calculadas de descanso y la frecuencia o intensidad del uso de los dispositivos mediante tablas de contingencia y análisis descriptivo.
+    \item Caracterizar los hábitos de consumo digital nocturno según el tipo de dispositivo y la ventana de exposición previa al descanso.
+    \item Estimar la duración absoluta y la calidad percibida del sueño durante los días lectivos frente a los fines de semana.
+    \item Identificar las variaciones en los patrones de descanso asociadas a los distintos niveles de exposición a pantallas.
 \end{enumerate}
 
 
 \section{Finalidad}
 
-El propósito central de este trabajo es aportar evidencia empírica directa sobre la realidad estudiantil de la Escuela de Estadística y Ciencias Actuariales, midiendo el impacto que tiene la exposición nocturna a pantallas sobre el descanso diario (LeBourgeois et al., 2017). Más allá de la tarea académica, se busca que los resultados de esta investigación sean de utilidad para la propia escuela, tanto a nivel estudiantil como del profesorado, por ejemplo: diseñar campañas concretas de higiene del sueño, proveer pautas realistas para la administración del tiempo de pantalla en semanas de alta carga evaluativa y abrir espacios de diálogo sobre el balance tecnológico en la vida universitaria.
+La recolección de estos datos primarios permite dimensionar un problema latente en la dinámica universitaria. Cuantificar el déficit de sueño frente a la exposición digital proporciona la base métrica empírica necesaria para que las autoridades de la Escuela estructuren campañas de higiene del sueño fundamentadas en su propia población, sustituyendo las suposiciones genéricas sobre el cansancio estudiantil.
 
 
 \section{Justificación}
 
-El descanso nocturno no constituye un simple intervalo de inactividad, sino un proceso neurobiológico activo indispensable para la consolidación sináptica, la memoria de trabajo y la recuperación metabólica (Hirshkowitz et al., 2015). En el ámbito de la EECA-UCV, donde el rendimiento del estudiante se basa principalmente en mantener una concentración sostenida por largos períodos de tiempo frente a asignaturas de alta exigencia analítica (como en Matemáticas, Estadísticas, Probabilidades etc.), la privación de sueño deteriora directamente la agilidad mental de los estudiantes y eleva el margen de error en el razonamiento cuantitativo, principamente durantes semanas de alta carga académica.
+El descanso nocturno no constituye un simple intervalo de inactividad, sino un proceso neurobiológico activo indispensable para la consolidación sináptica, la memoria de trabajo y la recuperación metabólica (Hirshkowitz et al., 2015). En el ámbito de la EECA-UCV, donde el rendimiento del estudiante se basa principalmente en mantener una concentración sostenida por largos períodos de tiempo frente a asignaturas de alta exigencia analítica (como en Matemáticas, Estadísticas, Probabilidades, etc.), la privación de sueño deteriora directamente la agilidad mental de los estudiantes y eleva el margen de error en el razonamiento cuantitativo, principalmente durante semanas de alta carga académica.
 
-En el plano metodológico, esta investigación brinda un valor formativo directo al permitir recolectar datos empíricos de primera mano en el campus estudiantil mediante un cuestionario estructurado, aplicando pruebas de asociación, tabulación cruzada y control de sesgos de medición en lugar de trabajar con conjuntos de datos secundarios. En el plano comunitario, atiende un hábito generalizado entre los estudiantes universitarios: retrasar el horario de dormir para compensar jornadas académicas o extender la interacción en redes sociales (LeBourgeois et al., 2017; Maurya et al., 2022), asumiendo un déficit biológico acumulativo cuyas consecuencias rara vez se cuantifican formalmente, o siquiera se tienen en cuenta.
+A nivel metodológico, la investigación deja a la comunidad académica un instrumento de medición validado para la realidad del estudiante universitario venezolano. El diseño estructural del cuestionario y la operacionalización de las variables establecen un precedente referencial. Futuros estudios observacionales en otras facultades podrán replicar esta arquitectura para contrastar el fenómeno del ``jetlag social'' y la disrupción circadiana en diferentes disciplinas.
 
 
 \section{Cobertura}
 
 \subsection{Cobertura Horizontal}
-La investigación está dirigida a los estudiantes de la EECA inscritos durante el período lectivo 2026-01S. El alcance real del estudio dependerá de una muestra conformada por aquellos estudiantes que decidan participar de forma voluntaria mediante su consentimiento.
+Queda circunscrita estrictamente al espacio físico y geográfico de las instalaciones de la Facultad de Ciencias Económicas y Sociales (FACES) de la Universidad Central de Venezuela, sede Caracas.
 
 \subsection{Cobertura Vertical}
-Se analizarán los hábitos de uso nocturno de pantallas (con énfasis en teléfonos inteligentes y computadoras portátiles) en las horas previas a dormir, así como la duración estimada del sueño que será calculada a partir de la diferencia entre los horarios de acostarse y levantarse, y la frecuencia de interrupciones del descanso reportadas por los propios estudiantes.
+La información recolectada se presentará con niveles de desagregación basados en el sexo del encuestado, el semestre cursado, el tipo de dispositivo principal utilizado y los tramos temporales de exposición nocturna.
 
 
 \section{Período de Referencia}
 
-El período para la recolección de los datos y la referencia temporal de las preguntas del cuestionario corresponden al semestre académico activo 2026-01S.
+\subsection{Período de Referencia}
+El comportamiento y los hábitos de descanso evaluados corresponden al semestre académico 2026-01S.
+
+\subsection{Período de Recolección de Datos}
+Comprendido entre el 15 y el 30 de noviembre de 2026, intervalo en el que se implementará y difundirá el cuestionario estructurado digital vía Google Forms entre los estudiantes inscritos en la EECA-UCV.
 
 
 \section{Antecedentes}
 
-El estudio del impacto de las tecnologías en el descanso se fundamenta en investigaciones internacionales previas:
+El marco empírico de esta investigación se fundamenta en estudios internacionales recientes de alta rigurosidad científica que han examinado la relación entre la tecnología digital y los parámetros de descanso:
 
 \begin{itemize}
-    \item \textbf{He et al. (2025):} En una revisión sistemática y metaanálisis publicada en \textit{Frontiers in Psychiatry} (con 21 estudios de cohorte y más de 548.000 participantes), concluyeron que cada hora adicional de pantalla al día reduce entre 3 y 5 minutos la duración del sueño e incrementa significativamente el riesgo de insomnio.
-    \item \textbf{Hysing et al. (2015):} En un estudio poblacional con adolescentes noruegos (\textit{BMJ Open}), determinaron que el uso de computadoras y teléfonos inteligentes antes de acostarse se asocia directamente con un mayor retraso para quedarse dormido y una menor cantidad total de horas de sueño.
-    \item \textbf{LeBourgeois et al. (2017):} Revisaron en \textit{Pediatrics} la evidencia disponible y definieron los tres mecanismos mediante los cuales las pantallas perjudican el descanso: la sustitución del tiempo de dormir, la estimulación psicológica provocada por los contenidos y la alteración del ciclo circadiano por la emisión de luz azul.
-    \item \textbf{Maurya et al. (2022):} En una investigación con jóvenes publicada en \textit{BMC Public Health}, encontraron que superar las tres horas diarias de uso de pantallas eleva de manera considerable la probabilidad de sufrir dificultades para dormir.
-    \item \textbf{Zhong et al. (2025):} Mediante un estudio observacional en adultos publicado en \textit{JAMA Network Open}, demostraron que la interacción con dispositivos electrónicos en la hora previa a dormir se vincula con un descanso más corto y una peor calidad percibida del sueño.
+    \item \textbf{He, X., Pan, B., Ma, N., Li, D., Kong, W., Liu, Q., Liu, X., Wang, X., Deng, X., \& Yang, K. (2025):} \textit{The association of screen time and the risk of sleep outcomes: A systematic review and meta-analysis}. Publicado en \textit{Frontiers in Psychiatry}, \textit{16}, 1640263.\\
+    Este trabajo representa un aporte metodológico directo al sintetizar 21 estudios de cohorte con 548.000 participantes. Los autores cuantificaron el riesgo relativo y la reducción marginal de minutos de sueño mediante modelos de metarregresión, lo cual fundamenta nuestra operacionalización del tiempo de exposición en intervalos continuos y la evaluación del riesgo de insomnio matutino.
+
+    \item \textbf{Hysing, M., Pallesen, S., Stormark, K. M., Jakobsen, R., Lundervold, A. J., \& Sivertsen, B. (2015):} \textit{Sleep and use of electronic devices in adolescence: Results from a large population-based study}. Publicado en \textit{BMJ Open}, \textit{5}(1), e006748.\\
+    Esta investigación constituye un precedente metodológico clave sobre el autorreporte de dispositivos en jóvenes. Los autores emplearon modelos de regresión logística ajustados por variables sociodemográficas para estimar el déficit de sueño, lo cual justifica nuestra estrategia de medir la latencia pre-sueño y discriminar el uso según el tipo de pantalla interactiva.
+
+    \item \textbf{LeBourgeois, M. K., Hale, L., Chang, A. M., Akacem, L. D., Montgomery-Downs, H. E., \& Buxton, O. M. (2017):} \textit{Digital media and sleep in childhood and adolescence}. Publicado en \textit{Pediatrics}, \textit{140}(Suppl 2), S92--S96.\\
+    Este estudio aporta la estructura conceptual para aislar los mecanismos fisiológicos del descanso. Los autores categorizan el desplazamiento temporal, la activación psicológica y la luz azul en el modelo de dos procesos, sustentando nuestra medición diferenciada de los horarios de acostarse frente a las horas efectivas de sueño.
+
+    \item \textbf{Maurya, C., Muhammad, T., Maurya, P., \& Dhillon, P. (2022):} \textit{The association of smartphone screen time with sleep problems among adolescents and young adults: Cross-sectional findings from India}. Publicado en \textit{BMC Public Health}, \textit{22}(1), 1686.\\
+    El aporte metodológico de este trabajo radica en su diseño transversal con jóvenes universitarios. Los autores aplicaron pruebas de chi-cuadrado y razones de prevalencia estratificadas para evaluar el umbral crítico de tres horas, lo cual orienta la construcción de nuestras tablas de contingencia y el análisis bivariado de datos.
+
+    \item \textbf{Zhong, C., Masters, M., Donzella, S. M., Diver, W. R., \& Patel, A. V. (2025):} \textit{Electronic screen use and sleep duration and timing in adults}. Publicado en \textit{JAMA Network Open}, \textit{8}(3), e252493.\\
+    Este antecedente fundamenta el análisis de la ventana temporal previa a la conciliación. Los autores modelaron el uso de pantallas en la última hora antes de dormir mediante ecuaciones de estimación generalizada, lo que respalda nuestra decisión de restringir la ventana crítica de exposición a las dos horas pre-descanso.
 \end{itemize}
 
 
@@ -162,147 +178,287 @@ El estudio del impacto de las tecnologías en el descanso se fundamenta en inves
 
 \subsection{Bases Teóricas}
 
-La regulación del sueño humano se explica principalmente a través del modelo de dos procesos (Borbély, 1982; LeBourgeois et al., 2017):
+La regulación psicofisiológica del sueño humano se explica fundamentalmente a través del modelo de dos procesos formulado por Alexander Borbély (1982; LeBourgeois et al., 2017):
 
 \begin{enumerate}
-    \item \textbf{Proceso C (Circadiano):} Es un ciclo biológico interno que dura aproximadamente 24 horas y es regulado por el núcleo supraquiasmático, el cual sincroniza los ritmos de vigilia y descanso guiándose por la luz ambiental captada por la retina.
-    \item \textbf{Proceso S (Homeostático):} Es la presión acumulativa de sueño que se incrementa de forma progresiva a medida que transcurren las horas de vigilia continua desde el último despertar.
+    \item \textbf{Proceso C (Ritmo Circadiano):} Es un ciclo biológico intrínseco de periodicidad cercana a las 24 horas, controlado por el núcleo supraquiasmático (NSQ) en el hipotálamo anterior. Este mecanismo actúa como un marcapasos que sincroniza los ciclos de vigilia y sueño con las señales de luz y oscuridad provenientes del medio ambiente.
+    \item \textbf{Proceso S (Presión Homeostática):} Representa la propensión neuroquímica acumulativa al sueño generada a medida que se extienden las horas continuas de vigilia. Al iniciarse el descanso, este potencial homeostático decae de forma exponencial hasta restablecer el equilibrio neurobiológico.
 \end{enumerate}
 
-\textbf{Interacción con la tecnología:} El uso nocturno de pantallas afecta ambos procesos a través de las tres vías descritas en la literatura (LeBourgeois et al., 2017): el primero, es el desplazamiento del horario de dormir al preferir continuar usando el dispositivo; el segundo, es la estimulación psicológica generada por la interacción en redes sociales o contenidos digitales; y el tercero, la exposición directa a la luz azul (450--480 nm), la cual inhibe la liberación de melatonina y retrasa la fase circadiana normal.
-
-\textbf{Higiene del sueño y latencia:} La higiene del sueño engloba los hábitos y condiciones del entorno que facilitan un descanso reparador y continuo (Hirshkowitz et al., 2015). El uso de dispositivos móviles en la cama incrementa la latencia del sueño (el tiempo que transcurre entre acostarse e iniciar el descanso), fragmentando la rutina nocturna y disminuyendo la eficiencia total del sueño (Hysing et al., 2015).
+\textbf{Mecanismos de disrupción digital:} La exposición a dispositivos electrónicos perturba ambos procesos a través de tres vías identificadas en la literatura (LeBourgeois et al., 2017):
+\begin{enumerate}[label=(\alph*)]
+    \item \textit{Desplazamiento del horario de sueño:} El estudiante pospone deliberadamente la hora de acostarse con el fin de prolongar el consumo recreativo de redes sociales o contenidos audiovisuales.
+    \item \textit{Activación cognitiva y neuroemocional:} La interactividad propia de los dispositivos móviles mantiene a la corteza cerebral en estado de alerta, dificultando la transición fisiológica hacia el descanso.
+    \item \textit{Supresión melatonérgica por luz azul:} Las pantallas LED emiten radiación en el espectro visible de longitud de onda corta ($\lambda \approx 450\text{--}480\text{ nm}$), la cual activa las células ganglionares de la retina y frena la síntesis de melatonina en la glándula pineal, retrasando la fase circadiana.
+\end{enumerate}
 
 
 \section{Bases Legales}
 
-La investigación se enmarca en la normativa jurídica venezolana vigente, orientada a la protección de la salud integral, el rendimiento educativo y el tratamiento ético de los datos estadísticos:
+La recolección y el procesamiento estadístico de la información en este estudio se ajustan estrictamente al ordenamiento jurídico de la República Bolivariana de Venezuela, garantizando la protección de los informantes y el rigor ético:
 
 \begin{itemize}
     \item \textbf{Constitución de la República Bolivariana de Venezuela (1999):}
     \begin{itemize}
-        \item \textit{Artículo 83:} Define la salud como un derecho social fundamental y obligación del Estado, respaldando la necesidad de investigar y prevenir factores que comprometan el bienestar de los jóvenes estudiantes.
-        \item \textit{Artículo 84:} Promueve la prevención de enfermedades y el desarrollo de investigaciones orientadas a la salud pública y colectiva.
+        \item \textbf{Artículo 28 (Acceso y protección a los datos personales):} Establece el derecho fundamental de toda persona de acceder a la información que sobre sí misma conste en registros públicos o privados, así como el derecho a exigir que sus datos se manejen bajo estricta confidencialidad y para los fines debidamente informados. Este artículo fundamenta la cláusula de consentimiento informado digital y el uso exclusivo académico de la información recolectada.
+        \item \textbf{Artículo 60 (Derecho a la intimidad, honor y vida privada):} Garantiza el derecho de toda persona a la protección de su intimidad, honor, vida privada y confidencialidad. Representa la justificación jurídica explícita para la salvaguarda y anonimización de las respuestas individuales sobre hábitos íntimos de sueño y rutinas personales de descanso.
+        \item \textbf{Artículos 83 y 84:} Reconocen la salud como un derecho social fundamental y comprometen el desarrollo de investigaciones destinadas a la prevención y al bienestar integral colectivo.
     \end{itemize}
     
     \item \textbf{Ley Orgánica de Educación (2009):}
     \begin{itemize}
-        \item \textit{Artículo 3:} Establece el pleno desarrollo de la personalidad y el bienestar integral como principios de la educación. El descanso adecuado es indispensable para que los estudiantes de la EECA-UCV mantengan un rendimiento académico óptimo ante las altas exigencias de su carrera.
+        \item \textbf{Artículo 3:} Declara el bienestar integral y el desarrollo pleno de la personalidad como objetivos de la educación superior, lo que exige condiciones propicias para que el estudiante universitario mantenga su capacidad analítica ante la exigencia curricular.
     \end{itemize}
     
     \item \textbf{Ley de la Función Pública de Estadística (2001):}
     \begin{itemize}
-        \item \textit{Principio de Confidencialidad y Secreto Estadístico:} Garantiza que toda la información individual aportada por los estudiantes en los cuestionarios sea tratada con fines estrictamente académicos, bajo reserva y resguardando el anonimato de los participantes.
+        \item \textbf{Artículos 19 y 20 (Principio del Secreto Estadístico):} Consagran que los datos suministrados por los informantes gozan de reserva legal. La información recolectada no podrá ser divulgada de manera individualizada ni utilizada para fines distintos al análisis cuantitativo agregado, asegurando el anonimato total mediante la supresión de identificadores directos (nombres, correos, cédulas o direcciones IP).
     \end{itemize}
 \end{itemize}
 
 
 \section{Variables en Estudio}
 
-\begin{enumerate}
-    \item \textbf{Tiempo de uso nocturno de dispositivos electrónicos (Variable Independiente principal):} Tiempo promedio (en minutos u horas) que el estudiante dedica a pantallas digitales en las horas previas a dormir. \textit{(Cuantitativa continua, escala de razón).}
-    \item \textbf{Tipo de dispositivo principal utilizado antes de dormir (Variable Independiente secundaria):} Equipo tecnológico que el estudiante emplea con mayor frecuencia antes del descanso (teléfono inteligente, computadora portátil, tablet u otro). \textit{(Cualitativa nominal politómica).}
-    \item \textbf{Duración estimada del sueño (Variable Dependiente):} Total de horas de descanso por noche, calculada a partir de la diferencia entre la hora de acostarse y la hora de levantarse. \textit{(Cuantitativa continua, escala de razón).}
-    \item \textbf{Percepción de la calidad del sueño (Variable Dependiente principal):} Valoración subjetiva del descanso expresada por el estudiante mediante una escala Likert (1 = Muy mala a 5 = Muy buena). \textit{(Cualitativa ordinal).}
-    \item \textbf{Frecuencia de interrupciones nocturnas (Variable Interviniente):} Cantidad habitual de veces que el estudiante se despierta de manera involuntaria durante la noche. \textit{(Cuantitativa discreta / Ordinal).}
-\end{enumerate}
+\subsection{Estrategia de Medición}
+Para erradicar el sesgo de estimación subjetiva de la duración del descanso, el estudio adopta una medición cronológica indirecta basada en los horarios habituales de acostarse y levantarse. La duración aproximada del sueño se calcula a partir de la diferencia horaria estricta:
+\begin{equation}
+    t_{\text{sueño}} = 
+    \begin{cases} 
+        t_{\text{levantarse}} - t_{\text{acostarse}}, & \text{si } t_{\text{levantarse}} \ge t_{\text{acostarse}} \\
+        (t_{\text{levantarse}} + 24) - t_{\text{acostarse}}, & \text{si } t_{\text{levantarse}} < t_{\text{acostarse}}
+    \end{cases}
+\end{equation}
+computada de forma diferenciada para los días lectivos de la semana y los fines de semana.
+
+\subsection{Cuadro de Operacionalización de Variables}
+
+A continuación se presenta la matriz metodológica formal que define los indicadores técnicos, tipo de variable, escala de medición y codificación de modalidades de respuesta (Arias, 2006; Seijas, 1993):
+
+\begin{table}[H]
+    \centering
+    \caption{Matriz de Operacionalización de Variables del Estudio}
+    \label{tab:operacionalizacion}
+    \vspace{0.2cm}
+    \scriptsize
+    \begin{tabularx}{\textwidth}{p{2.8cm}p{3.8cm}lllX}
+        \toprule
+        \textbf{Variable} & \textbf{Definición Operacional} & \textbf{Rol} & \textbf{Tipo} & \textbf{Escala} & \textbf{Codificación / Rango} \\
+        \midrule
+        \textbf{Tiempo de uso nocturno} & Minutos dedicados a pantallas en las 2h previas al sueño & Independiente principal & Cuantitativa continua & Razón & 1: $<30$ min, 2: $30\text{--}59$, 3: $60\text{--}119$, 4: $120\text{--}179$, 5: $\ge 180$ min \\
+        \addlinespace
+        \textbf{Dispositivo principal} & Equipo tecnológico predominante antes de dormir & Independiente secundaria & Cualitativa & Nominal & 1: Smartphone, 2: Laptop, 3: PC torre, 4: Tablet, 5: Smart TV, 6: Consola/Otro \\
+        \addlinespace
+        \textbf{Actividad digital principal} & Tarea de interacción predominante efectuada en la pantalla & Independiente secundaria & Cualitativa & Nominal & 1: Redes/mensajería, 2: Estudio/tareas UCV, 3: Video/streaming, 4: Juegos, 5: Trabajo \\
+        \addlinespace
+        \textbf{Latencia pre-sueño} & Minutos transcurridos desde que apaga el equipo hasta dormir & Independiente interviniente & Cuantitativa continua & Razón & Minutos continuos reportados $[0, 360]$ \\
+        \addlinespace
+        \textbf{Hora de acostarse (semana)} & Hora de reloj en que intenta dormir (Lun--Vie) & Primaria de cálculo & Cuantitativa & Intervalo & Horas y minutos (Formato 24h: HH:MM) \\
+        \addlinespace
+        \textbf{Hora de levantarse (semana)} & Hora de reloj en que despierta e inicia jornada (Lun--Vie) & Primaria de cálculo & Cuantitativa & Intervalo & Horas y minutos (Formato 24h: HH:MM) \\
+        \addlinespace
+        \textbf{Duración del sueño (semana)} & Horas calculadas por diferencia en días lectivos & Dependiente & Cuantitativa continua & Razón & Horas continuas. Categorías: $<5$h, $5\text{--}6.9$h, $7\text{--}9$h, $>9$h \\
+        \addlinespace
+        \textbf{Hora de acostarse (fin de sem.)} & Hora de reloj en que intenta dormir (Sáb--Dom) & Primaria de cálculo & Cuantitativa & Intervalo & Horas y minutos (Formato 24h: HH:MM) \\
+        \addlinespace
+        \textbf{Hora de levantarse (fin de sem.)} & Hora de reloj en que despierta (Sáb--Dom) & Primaria de cálculo & Cuantitativa & Intervalo & Horas y minutos (Formato 24h: HH:MM) \\
+        \addlinespace
+        \textbf{Duración en fin de semana} & Horas de reposo calculadas en días libres & Dependiente comparativa & Cuantitativa continua & Razón & Horas continuas. Diferencia permite calcular jetlag social ($\Delta t$) \\
+        \addlinespace
+        \textbf{Interrupciones nocturnas} & Despertares nocturnos motivados por revisar el dispositivo & Interviniente & Cuantitativa discreta & Razón & 0: Ninguna, 1: 1 vez, 2: 2 veces, 3: $\ge 3$ veces \\
+        \addlinespace
+        \textbf{Calidad percibida del sueño} & Percepción subjetiva del nivel de descanso al despertar & Dependiente principal & Cualitativa policotómica & Ordinal & 1: Muy mala, 2: Mala, 3: Regular, 4: Buena, 5: Excelente \\
+        \addlinespace
+        \textbf{Sexo biológico} & Condición biológica del encuestado & De control & Cualitativa dicotómica & Nominal & 1: Femenino, 2: Masculino \\
+        \addlinespace
+        \textbf{Edad cumplida} & Años solares cumplidos al momento del estudio & De control & Cuantitativa discreta & Razón & Valores enteros ($\ge 16$ años) \\
+        \addlinespace
+        \textbf{Carrera cursada} & Programa académico formalmente matriculado & De control & Cualitativa & Nominal & 1: Ciclo Básico, 2: Estadística, 3: Actuariales, 4: Ambas \\
+        \addlinespace
+        \textbf{Semestre académico} & Nivel curricular con mayor carga horaria cursada & De control & Cualitativa policotómica & Ordinal & 1: 1°--2°, 2: 3°--4°, 3: 5°--6°, 4: 7°--8°, 5: 9°--10° \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
 
 \section{Elementos de la Investigación}
 
 \subsection{Universo en Estudio}
-El universo de la investigación está conformado por los estudiantes regulares de pregrado activos en la Universidad Central de Venezuela (UCV).
+El universo de la investigación está conformado por los estudiantes regulares de pregrado formalmente inscritos y activos en la Universidad Central de Venezuela (UCV).
 
 \subsection{Población en Estudio}
-La población bajo estudio corresponde al total de estudiantes regulares formalmente inscritos en el período académico 2026-01S en la Escuela de Estadística y Ciencias Actuariales (EECA-UCV).
+La población objeto de estudio corresponde a la totalidad de estudiantes activos de pregrado inscritos durante el semestre académico 2026-01S en la Escuela de Estadística y Ciencias Actuariales (EECA) de la Facultad de Ciencias Económicas y Sociales (FACES-UCV). El tamaño censal definitivo ($N$) será suministrado por el Departamento de Control de Estudios de la Escuela al momento del levantamiento.
 
 
 \section{Plan de Tabulaciones Básicas}
 
-A continuación se presentan los modelos tabulares y las representaciones gráficas preliminares que estructuran la fase piloto del análisis.
+De conformidad con los requerimientos metodológicos de la fase de anteproyecto, se formulan a continuación los esquemas de cuadros estadísticos de salida completamente en blanco (títulos, cabeceras, filas y columnas sin datos muestrales observados ni simulados), proyectados para el procesamiento final de los datos primarios que se recolectarán con el instrumento.
 
 \begin{table}[H]
 \centering
-\caption{Muestra piloto / Ejemplo de distribución de estudiantes según tipo de dispositivo principal y tiempo promedio de uso nocturno.}
-\label{cuadro:piloto}
+\caption{Distribución de estudiantes según tipo de dispositivo principal y tiempo promedio de uso nocturno antes de dormir}
+\label{tab:tabulacion1}
+\vspace{0.25cm}
+\footnotesize
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Dispositivo Principal} & \multicolumn{5}{c}{\textbf{Tiempo de Exposición Nocturna}} & \textbf{Total} \\
+\cmidrule(lr){2-6}
+& \textbf{$< 30$ min} & \textbf{$30\text{--}59$ min} & \textbf{$60\text{--}119$ min} & \textbf{$120\text{--}179$ min} & \textbf{$\ge 180$ min} & \\
+\midrule
+Teléfono inteligente & & & & & & \\
+Computadora portátil & & & & & & \\
+Computadora de escritorio & & & & & & \\
+Tableta electrónica & & & & & & \\
+Televisor / Smart TV & & & & & & \\
+Consola u otros & & & & & & \\
+\midrule
+\textbf{Total} & & & & & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{0.3cm}
+
+\begin{table}[H]
+\centering
+\caption{Estadísticos descriptivos proyectados de las horas calculadas de sueño según régimen semanal}
+\label{tab:tabulacion2}
 \vspace{0.25cm}
 \small
-\begin{tabular}{ccccc}
+\begin{tabular}{lcccccc}
 \toprule
-\textbf{Estudiante / ID} & \textbf{Dispositivo Principal} & \textbf{Tiempo de uso (min)} & \textbf{Horas de sueño} & \textbf{Calidad (Likert)} \\
+\textbf{Régimen Semanal} & \textbf{Media ($\bar{x}$)} & \textbf{Mediana ($\tilde{x}$)} & \textbf{Desv. Est. ($s$)} & \textbf{IQR} & \textbf{Mínimo} & \textbf{Máximo} \\
 \midrule
-001 & Teléfono inteligente & 120 & 5.5 & Mala (2) \\
-002 & Computadora portátil & 90  & 6.0 & Regular (3) \\
-003 & Teléfono inteligente & 150 & 4.5 & Muy mala (1) \\
-004 & Tablet               & 45  & 7.0 & Buena (4) \\
-005 & Teléfono inteligente & 180 & 5.0 & Mala (2) \\
-006 & Televisor / Otros    & 60  & 6.5 & Regular (3) \\
-007 & Computadora portátil & 120 & 5.0 & Mala (2) \\
-008 & Teléfono inteligente & 210 & 4.0 & Muy mala (1) \\
-009 & Tablet               & 30  & 7.5 & Muy buena (5) \\
-010 & Teléfono inteligente & 90  & 6.0 & Regular (3) \\
+Días lectivos (Lun--Vie) & & & & & & \\
+Fines de semana (Sáb--Dom) & & & & & & \\
+Diferencia horaria ($\Delta t$) & & & & & & \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\vspace{0.2cm}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.82\textwidth]{figura1_dispersion.png}
-\caption{Gráfico de dispersión y línea de tendencia entre el tiempo de uso nocturno de pantallas y la duración del sueño, para evaluar si un mayor tiempo frente a la pantalla se asocia con menos horas de descanso.}
-\label{fig:dispersion}
-\end{figure}
-
-\vspace{0.4cm}
+\vspace{0.3cm}
 
 \begin{table}[H]
 \centering
-\caption{Estadísticas descriptivas de las variables bajo estudio: Tiempo de pantallas y Duración del sueño según prueba piloto/ejemplo.}
-\label{cuadro:descriptivas}
+\caption{Tabla de contingencia: Nivel de tiempo de pantalla nocturno vs. Calidad percibida del sueño}
+\label{tab:tabulacion3}
 \vspace{0.25cm}
-\begin{tabular}{lcc}
+\small
+\begin{tabular}{lcccccc}
 \toprule
-\textbf{Estadísticos} & \textbf{Tiempo de uso nocturno (min)} & \textbf{Duración estimada del sueño (Horas)} \\
+\textbf{Tiempo de Pantalla Nocturno} & \multicolumn{5}{c}{\textbf{Calidad Percibida del Sueño}} & \textbf{Total} \\
+\cmidrule(lr){2-6}
+& \textbf{Muy mala} & \textbf{Mala} & \textbf{Regular} & \textbf{Buena} & \textbf{Excelente} & \\
 \midrule
-Media               & 109,50 & 5,70 \\
-Mediana             & 105,00 & 5,75 \\
-Desviación estándar & 58,33  & 1,11 \\
-Mínimo              & 30,00  & 4,00 \\
-Máximo              & 210,00 & 7,50 \\
+Menos de 30 minutos & & & & & & \\
+Entre 30 y 59 minutos & & & & & & \\
+Entre 60 y 119 minutos & & & & & & \\
+Entre 120 y 179 minutos & & & & & & \\
+180 minutos o más & & & & & & \\
+\midrule
+\textbf{Total} & & & & & & \\
 \bottomrule
 \end{tabular}
-\\[0.25cm]
-\parbox{0.88\textwidth}{\footnotesize \textit{Nota:} Parámetros descriptivos calculados sobre la muestra del Cuadro 1 ($n=10$) empleando la cuasivarianza muestral insesgada ($s$).}
 \end{table}
 
-\vspace{0.2cm}
+\vspace{0.3cm}
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\includegraphics[width=0.82\textwidth]{figura2_descriptivas.png}
-\caption{Comparación de las estadísticas descriptivas principales de las variables de estudio (tiempo de exposición a pantallas y duración estimada del sueño).}
-\label{fig:descriptivas}
-\end{figure}
+\caption{Distribución bivariada de estudiantes de la EECA según horas de sueño y sexo}
+\label{tab:tabulacion4}
+\vspace{0.25cm}
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Horas Calculadas de Sueño} & \multicolumn{2}{c}{\textbf{Sexo Biológico}} & \textbf{Total ($n$)} & \textbf{Porcentaje (\%)} \\
+\cmidrule(lr){2-3}
+& \textbf{Femenino} & \textbf{Masculino} & & \\
+\midrule
+Menos de 5 horas (Muy corta) & & & & \\
+De 5 a 6,9 horas (Corta) & & & & \\
+De 7 a 9 horas (Óptima) & & & & \\
+Más de 9 horas (Prolongada) & & & & \\
+\midrule
+\textbf{Total Muestral} & & & & 100,0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{0.3cm}
+
+\begin{table}[H]
+\centering
+\caption{Distribución de interrupciones nocturnas según semestre o nivel curricular cursado}
+\label{tab:tabulacion5}
+\vspace{0.25cm}
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Semestre Cursado} & \multicolumn{4}{c}{\textbf{Frecuencia de Despertares Nocturnos}} & \textbf{Total} \\
+\cmidrule(lr){2-5}
+& \textbf{0 veces} & \textbf{1 vez} & \textbf{2 veces} & \textbf{$\ge 3$ veces} & \\
+\midrule
+1° -- 2° semestre & & & & & \\
+3° -- 4° semestre & & & & & \\
+5° -- 6° semestre & & & & & \\
+7° -- 8° semestre & & & & & \\
+9° -- 10° semestre & & & & & \\
+\midrule
+\textbf{Total} & & & & & \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 
 \section{Cuestionario Preliminar}
 
-\textit{Instrumento aplicado bajo la modalidad de autorreporte digital a la comunidad estudiantil de la EECA-UCV:}
+\textit{Instrumento estructurado para aplicación bajo modalidad de autorreporte digital a los estudiantes de la EECA-UCV (disponible íntegramente como documento anexo independiente en formato PDF):}
 
-\begin{itemize}
-    \item \textbf{Sección I:} Datos Demográficos y Académicos (Género, Semestre).
-    \item \textbf{Sección II:} Hábitos de Uso de Dispositivos (Dispositivo principal, Minutos de exposición previa al sueño).
-    \item \textbf{Sección III:} Hábitos y Calidad del Sueño (Horarios de acostarse y levantarse en semana y fines de semana, Escala Likert de calidad, Frecuencia de interrupciones).
+\begin{center}
+    \fbox{
+    \begin{minipage}{0.93\textwidth}
+        \textbf{UNIVERSIDAD CENTRAL DE VENEZUELA --- FACES --- EECA} \\
+        \textbf{CÁTEDRA DE COMPUTACIÓN ESTADÍSTICA --- PERÍODO 2026-01S} \\
+        \vspace{0.15cm}
+        \textbf{Consentimiento Informado:} Su participación es anónima y voluntaria. De conformidad con los Artículos 28 y 60 de la Constitución de la República Bolivariana de Venezuela y los Artículos 19 y 20 de la Ley de la Función Pública de Estadística, sus respuestas gozan de reserva legal y confidencialidad estricta.
+    \end{minipage}
+    }
+\end{center}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Sección I: Datos Demográficos y Académicos}
+    \begin{enumerate}
+        \item Sexo biológico: [1] Femenino \quad [2] Masculino
+        \item Edad cumplida: [\hspace{1.5cm}] años.
+        \item Carrera cursada: [1] Ciclo Básico \quad [2] Estadística \quad [3] Ciencias Actuariales \quad [4] Ambas
+        \item Semestre actual: [1] 1°--2° \quad [2] 3°--4° \quad [3] 5°--6° \quad [4] 7°--8° \quad [5] 9°--10°
+    \end{enumerate}
+
+    \item \textbf{Sección II: Hábitos de Consumo Digital y Uso de Pantallas}
+    \begin{enumerate}[resume]
+        \item Dispositivo principal utilizado en las 2 horas previas a dormir: [1] Smartphone \quad [2] Laptop \quad [3] PC de escritorio \quad [4] Tablet \quad [5] Smart TV \quad [6] Consola/Otro
+        \item Tiempo promedio de exposición nocturna a pantallas antes de intentar dormir: [1] $<30$ min \quad [2] $30\text{--}59$ min \quad [3] $60\text{--}119$ min \quad [4] $120\text{--}179$ min \quad [5] $\ge 180$ min
+        \item Actividad digital predominante: [1] Redes sociales / mensajería \quad [2] Estudio / tareas UCV \quad [3] Streaming de video \quad [4] Videojuegos \quad [5] Trabajo
+        \item Minutos de latencia pre-sueño desde que deja el equipo hasta cerrar los ojos: [\hspace{1.5cm}] min.
+    \end{enumerate}
+
+    \item \textbf{Sección III: Parámetros de Descanso y Calidad Percibida}
+    \begin{enumerate}[resume]
+        \item Horario habitual en días lectivos (Lunes a Viernes): Hora acostarse: [\hspace{1.5cm}] \quad Hora levantarse: [\hspace{1.5cm}]
+        \item Horario habitual en fines de semana (Sábado y Domingo): Hora acostarse: [\hspace{1.5cm}] \quad Hora levantarse: [\hspace{1.5cm}]
+        \item Interrupciones o despertares nocturnos motivados por revisar el dispositivo: [0] Ninguna \quad [1] 1 vez \quad [2] 2 veces \quad [3] $\ge 3$ veces
+        \item Calidad subjetiva percibida del descanso al despertar: [5] Excelente \quad [4] Buena \quad [3] Regular \quad [2] Mala \quad [1] Muy mala
+    \end{enumerate}
 \end{itemize}
 
 
 \section{Posibles Dificultades para la Realización del Trabajo}
 
 \begin{enumerate}
-    \item \textbf{Inexactitud y sesgo de memoria en el autorreporte:} Al tratarse del uso de la encuesta digital y no de una medición directa del sistema operativo de los teléfonos o los dispositivos electrónicos, los tiempos reportados dependen de la estimación subjetiva de cada estudiante. Esto introduce un margen de error en la reconstrucción retrospectiva del tiempo nocturno, tendiendo a subestimar el uso fragmentado en redes sociales y sobrestimar las horas efectivas dormidas al confundir hora de acostarse con tiempo de sueño real.
+    \item \textbf{Inexactitud y sesgo de memoria en el autorreporte:} Al tratarse del uso de la encuesta digital y no de una medición directa del sistema operativo de los teléfonos o dispositivos electrónicos, los tiempos reportados dependen de la estimación subjetiva de cada estudiante. Esto introduce un margen de error en la reconstrucción retrospectiva del tiempo nocturno, tendiendo a subestimar el uso fragmentado en redes sociales y sobrestimar las horas efectivas dormidas al confundir hora de acostarse con tiempo de sueño real.
     \item \textbf{Caída en la tasa de respuesta por calendarios de evaluación:} La difusión del formulario puede coincidir con momentos álgidos del semestre (períodos de pruebas parciales), lo cual puede mermar la tasa de respuesta voluntaria o concentrar las respuestas en estudiantes con cargas académicas menos exigentes.
-    \item \textbf{Variables de confusión no aisladas en el cuestionario:} El descanso universitario se ve condicionado por factores intervinientes de peso como el consumo nocturno de café o estimulantes para estudiar, traslados prolongados hacia la universidad y jornadas laborales extracurriculares o sociales. Aislar con precisión el efecto atribuible exclusivamente a la pantalla requerirá un análisis más cuidadoso.
+    \item \textbf{Variables de confusión no aisladas en el cuestionario:} El descanso universitario se ve condicionado por factores intervinientes de peso como el consumo nocturno de café o estimulantes para estudiar, traslados prolongados hacia la universidad y jornadas laborales extracurriculares o sociales. Aislar con precisión la asociación atribuible a la pantalla requerirá un análisis más cuidadoso.
     \item \textbf{Dispersión por asimetría semanal:} Los estudiantes suelen presentar patrones de descanso bimodal con restricción severa de sueño de lunes a viernes y compensación o desvelo agudo los fines de semana. Al calcular un promedio simple sin diferenciar ambos regímenes distorsionaría la interpretación de la varianza.
 \end{enumerate}
 
@@ -310,6 +466,8 @@ Máximo              & 210,00 & 7,50 \\
 \section{Bibliografía}
 
 \begin{hangparas}{.5in}{1}
+Arias, F. G. (2006). \textit{El proyecto de investigación: Introducción a la metodología científica} (5.ª ed.). Editorial Episteme.
+
 Borbély, A. A. (1982). A two process model of sleep regulation. \textit{Human Neurobiology}, \textit{1}(3), 195--204.
 
 Constitución de la República Bolivariana de Venezuela. (1999). \textit{Gaceta Oficial de la República Bolivariana de Venezuela Extraordinaria N° 5.453}, 24 de marzo de 2000. \url{http://historico.tsj.gob.ve/legislacion/constitucion1999.htm}
@@ -329,6 +487,8 @@ Ley Orgánica de Educación. (2009). \textit{Gaceta Oficial de la República Bol
 Liu, Y., Wheaton, A. G., Chapman, D. P., Cunningham, T. J., Lu, H., \& Croft, J. B. (2016). Prevalence of healthy sleep duration among adults --- United States, 2015. \textit{MMWR. Morbidity and Mortality Weekly Report}, \textit{65}(6), 137--141. \url{https://doi.org/10.15585/mmwr.mm6506a1}
 
 Maurya, C., Muhammad, T., Maurya, P., \& Dhillon, P. (2022). The association of smartphone screen time with sleep problems among adolescents and young adults: Cross-sectional findings from India. \textit{BMC Public Health}, \textit{22}(1), 1686. \url{https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-022-14076-x}
+
+Seijas, F. (1993). \textit{Investigación por muestreo} (2.ª ed.). Ediciones de la Biblioteca, Universidad Central de Venezuela.
 
 Zhong, C., Masters, M., Donzella, S. M., Diver, W. R., \& Patel, A. V. (2025). Electronic screen use and sleep duration and timing in adults. \textit{JAMA Network Open}, \textit{8}(3), e252493. \url{https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2831993}
 \end{hangparas}
