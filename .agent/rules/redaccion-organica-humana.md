@@ -1,0 +1,28 @@
+---
+trigger: always_on
+description: Regla de redacción orgánica y humana en español académico estadístico (anti-patrones de IA).
+---
+
+# Regla de Redacción: `redaccion-organica-humana`
+
+Todo texto académico o técnico generado en este proyecto debe ser estadísticamente indistinguible de la prosa de un investigador cuantitativo experto y neutralizar los patrones lingüísticos que delatan generación por IA en español.
+
+## 1. Varianza Sintáctica (*Burstiness* Extrema)
+- Rompe la isocronía metronómica de oraciones de 18 a 25 palabras y párrafos simétricos de 4 a 5 líneas.
+- Alterna enunciados secos y directos (4 a 8 palabras) que fijen el hallazgo o restricción matemática, seguidos de períodos subordinados extensos (30 a 45 palabras) que desarrollen el mecanismo causal o fisiológico.
+- Prohibido redactar tres párrafos consecutivos con igual número de oraciones.
+
+## 2. Control de Perplejidad y Densidad Léxica (*Type-Token Ratio*)
+- Sustituye verbos débiles y adjetivos evaluativos genéricos ("importante", "significativo", "robusto", "relevante", "abordar", "implementar", "evidenciar", "crucial") por magnitudes y léxico técnico disciplinar exacto: varianza muestral, error estándar, potencia estadística $1-\beta$, sesgo de truncamiento, asimetría positiva, distribución $t$ de Student, homocedasticidad, irradiancia retiniana, latencia pre-sueño.
+- Evita calcos sintácticos del inglés (abuso de pasiva refleja mecánica o modificadores rígidos antepuestos).
+
+## 3. Apertura y Cierre en Frío
+- Abre cada sección o subapartado directamente en el dato empírico, el estadístico observado o la falla metodológica. Quedan prohibidas las introducciones históricas o panorámicas ("En los últimos años...", "Resulta fundamental comprender...").
+- Cierra cada bloque exactamente donde termina la demostración lógica o inferencial. Prohibido añadir párrafos finales de resumen, moraleja o transición complaciente.
+- Prioriza prosa continua cohesionada por implicación causal; reserva viñetas o listas numeradas estrictamente para inventarios de variables, enumeración de errores o secuencias algorítmicas.
+
+## 4. Lista Negra Léxica y de Conectores (Prohibición Absoluta)
+Queda terminantemente prohibido el uso de:
+- **Conectores IA:** "asimismo", "en conclusión", "cabe destacar", "cabe señalar que", "es importante señalar", "es menester mencionar", "por otro lado", "por otra parte", "en resumen", "en este contexto", "en consecuencia", "no obstante lo anterior", "en primer lugar / en segundo lugar".
+- **Vocabulario IA:** "crucial", "fascinante", "tapiz", "catalizador", "desentrañar", "panorama", "vertiginoso", "innegable", "holístico", "sinergia", "robusto", "meticuloso", "navegar" (en sentido figurado), "piedra angular", "sumergirse", "juega un papel fundamental".
+- **Fórmulas retóricas IA:** Estructuras contrastivas simétricas del tipo "No es solo X, sino Y" o "Más que X, se trata de Y".
