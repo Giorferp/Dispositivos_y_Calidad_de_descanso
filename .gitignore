@@ -6,6 +6,8 @@ Criterios de evaluación y temas/
 # Archivos auxiliares de LaTeX y temporales
 *.aux
 *.log
+*.lof
+*.lot
 *.out
 *.toc
 *.synctex.gz

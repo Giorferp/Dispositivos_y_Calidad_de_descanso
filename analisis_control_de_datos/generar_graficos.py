@@ -17,10 +17,10 @@ informe final (EECA-UCV, 2026-01S).
 Ejecución:  uv run generar_graficos.py
 
 Salidas:
-  - grafico_*.png               (directorio de trabajo, 300 dpi)
-  - cuadros_resultados.tex      (cuadros con booktabs, \\input desde el informe)
-  - cuadros_resultados.md       (los mismos cuadros en Markdown para el .ipynb)
-  - resultados_inferencia.json  (estadísticos usados en el texto del informe)
+  - ../Informe_Final/Entregables/grafico_*.png               (300 dpi, para LaTeX y notebook)
+  - ../Informe_Final/Entregables/cuadros_resultados.tex      (cuadros con booktabs, \\input desde el informe)
+  - cuadros_resultados.md                                    (los mismos cuadros en Markdown para el .ipynb)
+  - resultados_inferencia.json                               (estadísticos usados en el texto del informe)
 """
 from __future__ import annotations
 
@@ -40,6 +40,8 @@ from matplotlib.ticker import MaxNLocator
 from scipy import stats
 
 RAIZ = Path(__file__).resolve().parent
+DIR_INFORME = RAIZ.parent / "Informe_Final" / "Entregables"
+DIR_INFORME.mkdir(parents=True, exist_ok=True)
 ARCHIVO = RAIZ / "Encuesta sobre uso de dispositivos y calidad del sueño (Respuestas).xlsx"
 N_VALIDO = 28
 
@@ -231,7 +233,7 @@ def barras_univariadas(
         ax.set_xlabel(xlabel)
         ax.set_ylim(0, conteos.max() * 1.30)
         ax.yaxis.set_major_locator(MaxNLocator(integer=True))
-    fig.savefig(RAIZ / archivo)
+    fig.savefig(DIR_INFORME / archivo)
     plt.close(fig)
 
 
@@ -301,7 +303,7 @@ def barras_apiladas(
         handlelength=1.2,
         title_fontsize=9,
     )
-    fig.savefig(RAIZ / archivo)
+    fig.savefig(DIR_INFORME / archivo)
     plt.close(fig)
 
 
@@ -431,7 +433,7 @@ ax.set_xticks([15, 44.5, 89.5, 149.5, 195])
 ax.set_xticklabels(["15", "44,5", "89,5", "149,5", "195"])
 ax.yaxis.set_major_locator(MaxNLocator(integer=True))
 ax.legend(frameon=False, loc="upper right")
-fig.savefig(RAIZ / "grafico1_dispersion.png")
+fig.savefig(DIR_INFORME / "grafico1_dispersion.png")
 plt.close(fig)
 
 # Gráfico 13: Calidad promedio al despertar según tramo de pantalla
@@ -445,7 +447,7 @@ ax.set_ylabel("Puntaje promedio (1: Somnolencia a 3: Energía)")
 ax.set_ylim(1.2, 2.18)
 for p, v in zip(pos_c, medias_cal.values):
     ax.text(p, v + 0.025, coma(v, 2), ha="center", va="bottom", fontsize=9.5, fontweight="bold", color="#1f2933")
-fig.savefig(RAIZ / "grafico2_calidad_pantallas.png")
+fig.savefig(DIR_INFORME / "grafico2_calidad_pantallas.png")
 plt.close(fig)
 
 # Gráfico 14: Comparación semanal vs fin de semana (diagrama de cajas)
@@ -484,7 +486,7 @@ ax.set_xlabel("")
 ax.set_ylabel("Horas calculadas de sueño")
 ax.yaxis.set_major_locator(MaxNLocator(integer=True))
 ax.legend(frameon=False, loc="upper left")
-fig.savefig(RAIZ / "grafico3_semana_vs_finde.png")
+fig.savefig(DIR_INFORME / "grafico3_semana_vs_finde.png")
 plt.close(fig)
 
 # ---------------------------------------------------------------------------
@@ -1006,7 +1008,7 @@ cuadro(
     tam=r"\footnotesize",
 )
 
-(RAIZ / "cuadros_resultados.tex").write_text(
+(DIR_INFORME / "cuadros_resultados.tex").write_text(
     "% Generado automáticamente por generar_graficos.py: no editar a mano.\n" + "\n".join(tex),
     encoding="utf-8",
 )
